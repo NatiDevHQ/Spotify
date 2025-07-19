@@ -1,8 +1,8 @@
-import { route } from "express";
+import { Router } from "express";
 
-const router = route();
-router.get("/stats", (req, res) => {
-  res.json({ message: "Statistics endpoint" });
+const router = Router();
+router.get("/", (req, res) => {
+  res.send("Admin endpoint is working");
 });
 
 export default router;
