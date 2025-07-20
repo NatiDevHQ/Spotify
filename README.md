@@ -177,7 +177,7 @@ spotify-clone/
 
 🧑‍💻 Author
 
-Built by Your Name – feel free to reach out or contribute!
+Built by Natnael – feel free to reach out or contribute!
 
 
 ---
@@ -188,5 +188,4 @@ This project is open-source and available under the MIT License.
 
 ---
 
-Would you like me to generate a GitHub-style preview or even a matching UI image layout as well?
 
