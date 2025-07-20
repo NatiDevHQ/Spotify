@@ -163,16 +163,6 @@ spotify-clone/
 [ ] Mobile responsiveness
 
 
-
----
-
-📸 UI Screenshots
-
-> (Include screenshots or GIFs of the app here if available)
-
-
-
-
 ---
 
 🧑‍💻 Author
