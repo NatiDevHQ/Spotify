@@ -1,5 +1,3 @@
-Here’s a well-structured README.md file for your Spotify Clone using the MERN stack, Clerk for authentication, Cloudinary for media uploads, and Tailwind CSS for styling:
-
 
 ---
 
