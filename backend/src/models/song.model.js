@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const songSchema = new mongoose.Schema(
   {
@@ -11,11 +11,11 @@ const songSchema = new mongoose.Schema(
       required: true,
     },
     imageUrl: {
-      type: string,
+      type: String,
       required: true,
     },
     audioUrl: {
-      type: string,
+      type: String,
       required: true,
     },
     duration: {
@@ -24,11 +24,11 @@ const songSchema = new mongoose.Schema(
     },
     albumId: {
       type: mongoose.Schema.Types.ObjectId,
-      required: false,
       ref: "Album",
+      required: false,
     },
   },
-  { timestamps: true } // Automatically manage createdAt and updatedAt fields
+  { timestamps: true }
 );
 
 export const Song = mongoose.model("Song", songSchema);
