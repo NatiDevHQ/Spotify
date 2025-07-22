@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import { clerkMiddleware } from "@clerk/express";
 import connectDB from "./lib/db.js";
 import userRouter from "./routes/user.route.js";
 import adminRouter from "./routes/admin.route.js";
@@ -14,6 +15,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 app.use(express.json());
+app.use(clerkMiddleware()); //this will add auth to req
 
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
