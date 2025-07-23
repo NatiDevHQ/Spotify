@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema(
       unique: true,
     },
   },
-  { timestamps: true } // Automatically manage createdAt and updatedAt fields
+  { timestamps: true } //  createdAt, updatedAt
 );
 
 export const User = mongoose.model("User", userSchema);
