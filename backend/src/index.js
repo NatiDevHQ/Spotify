@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import dotenv from "dotenv";
 import { clerkMiddleware } from "@clerk/express";
 import fileupload from "express-fileupload";
