@@ -63,7 +63,7 @@ Used for hosting:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/spotify-clone-mern.git
+git clone https://github.com/Eng-Natole/spotify-clone-mern.git
 cd spotify-clone-mern
 
 
