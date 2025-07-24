@@ -1,7 +1,7 @@
 
 ---
 
-# 🎵 Spotify Clone (MERN)
+# 🎵 Spotify (MERN)
 
 A full-stack Spotify clone built with the **MERN** stack (MongoDB, Express, React, Node.js), **Clerk** for authentication, **Cloudinary** for image & audio uploads, and **Tailwind CSS** for UI styling.
 
