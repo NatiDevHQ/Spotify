@@ -13,10 +13,7 @@ const Topbar = () => {
       backdrop-blur-md z-10
     "
     >
-      <div className="flex gap-2 items-center">
-        <img src="/spotify.png" className="size-8" alt="Spotify logo" />
-        faarsaa
-      </div>
+      <div className="flex gap-2 items-center">Faarsaa</div>
       <div className="flex items-center gap-4">
         {isAdmin && (
           <Link
