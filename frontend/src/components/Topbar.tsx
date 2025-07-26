@@ -1,9 +1,14 @@
-import { SignedOut, UserButton } from "@clerk/clerk-react";
 import { LayoutDashboardIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import SignInOAuthButtons from "./SignInOAuthButtons";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
+import {
+  SignedIn,
+  SignInButton,
+  SignedOut,
+  UserButton,
+} from "@clerk/clerk-react";
 
 const Topbar = () => {
   const isAdmin = false;
@@ -13,7 +18,10 @@ const Topbar = () => {
       backdrop-blur-md z-10
     "
     >
-      <div className="flex gap-2 items-center">Faarsaa</div>
+      <div className="flex gap-2 items-center">
+        <img src="/spotify.png" className="size-8" alt="Spotify logo" />
+        Spotify
+      </div>
       <div className="flex items-center gap-4">
         {isAdmin && (
           <Link
