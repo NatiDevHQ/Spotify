@@ -12,7 +12,7 @@ const App = () => {
           path="/sso-callback"
           element={
             <AuthenticateWithRedirectCallback
-              signInFallbackRedirectUrl={"/auth-callback"}
+              signUpForceRedirectUrl={"/auth-callback"}
             />
           }
         />

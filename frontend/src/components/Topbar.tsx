@@ -1,4 +1,4 @@
-import { SignedOut, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignOutButton } from "@clerk/clerk-react";
 import { LayoutDashboardIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import SignInOAuthButtons from "./SignInOAuthButtons";
@@ -8,7 +8,6 @@ import { buttonVariants } from "./ui/button";
 
 const Topbar = () => {
   const isAdmin = false;
-  console.log({ isAdmin });
 
   return (
     <div
@@ -30,12 +29,13 @@ const Topbar = () => {
             Admin Dashboard
           </Link>
         )}
+        <SignedIn>
+          <SignOutButton />
+        </SignedIn>
 
         <SignedOut>
           <SignInOAuthButtons />
         </SignedOut>
-
-        <UserButton />
       </div>
     </div>
   );
