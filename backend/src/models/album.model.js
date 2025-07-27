@@ -14,8 +14,8 @@ const albumSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    releaseDate: {
-      type: Date,
+    releaseYear: {
+      type: Number,
       required: true,
     },
     songs: [
