@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const LeftSidebar = () => {
-  const { albums, fetchAlbums, songs, isLoading } = useMusicStore();
+  const { albums, fetchAlbums, isLoading } = useMusicStore();
 
   useEffect(() => {
     fetchAlbums();
@@ -67,11 +67,27 @@ const LeftSidebar = () => {
         <ScrollArea className="h-[calc(100vh-300px)]  ">
           <div className="space-y-2">
             {isLoading ? (
-              <div className="text-zinc-400">
-                <PlaylistSkeleton />
-              </div>
+              <PlaylistSkeleton />
             ) : (
-              <div className="text-zinc-400">No playlists found</div>
+              albums.map((album) => (
+                <Link
+                  to={`/albums/${album._id}`}
+                  key={album.id}
+                  className="p-2 hover:bg-zinc-800 rounded-md flex items-center gap-3 group cursor-pointer"
+                >
+                  <img
+                    src={album.imageUrl}
+                    alt="playlist"
+                    className="size-12 rounded-md flex-shrink-0 object-cover"
+                  />
+                  <div className="flex-1 min-w-0 hidden md:block">
+                    <p className="truncate">{album.title}</p>
+                    <p className="truncate text-sm text-zinc-400">
+                      Album • {album.artist}
+                    </p>
+                  </div>
+                </Link>
+              ))
             )}
           </div>
         </ScrollArea>
