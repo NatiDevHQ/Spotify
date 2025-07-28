@@ -1,4 +1,3 @@
-
 ---
 
 # 🎵 Spotify (MERN). 
@@ -21,12 +20,14 @@ A full-stack Spotify clone built with the **MERN** stack (MongoDB, Express, Reac
 ## 🛠 Tech Stack
 
 ### Frontend:
+
 - React.js (Vite or CRA)
 - Tailwind CSS
 - Clerk React SDK
 - Axios
 
 ### Backend:
+
 - Node.js + Express.js
 - MongoDB with Mongoose
 - Cloudinary SDK
@@ -118,7 +119,7 @@ cd client
 npm run dev
 
 > App runs on:
-Frontend: http://localhost:5173
+Frontend: http://localhost:3000
 Backend: http://localhost:5000
 
 
@@ -179,3 +180,4 @@ This project is open-source and available under the MIT License.
 ---
 
 
+```
