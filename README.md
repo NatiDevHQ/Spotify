@@ -1,181 +1,219 @@
----
-
-# 🎵 Spotify (MERN). 
-
-A full-stack Spotify clone built with the **MERN** stack (MongoDB, Express, React, Node.js), **Clerk** for authentication, **Cloudinary** for image & audio uploads, and **Tailwind CSS** for UI styling.
-
-## ✨ Features.
-
-- 🔐 User authentication with Clerk (Sign in, Sign up, etc.)
-- 🎶 Upload & stream music tracks
-- 🖼 Upload album/track artwork via Cloudinary
-- 🎧 Playlist & artist management
-- 🔍 Search for songs, artists, and albums
-- 🖥 Responsive and modern UI with Tailwind CSS
-- 📝 Admin panel for managing tracks (optional)
-- 💾 MongoDB for persistent data storage
-
----
-
-## 🛠 Tech Stack
-
-### Frontend:
-
-- React.js (Vite or CRA)
-- Tailwind CSS
-- Clerk React SDK
-- Axios
-
-### Backend:
-
-- Node.js + Express.js
-- MongoDB with Mongoose
-- Cloudinary SDK
-- Clerk Express Middleware
-- Multer (for file handling)
-
----
-
-## 🔐 Authentication
-
-This project uses [Clerk](https://clerk.com/) for user authentication:
-
-- User sessions
-- JWT protection for routes
-- Role-based access (if needed)
-
-> You'll need a **Clerk Publishable Key** and **Clerk Secret Key**
-
----
-
-## ☁️ Cloudinary Setup
-
-Used for hosting:
-
-- Track cover images
-- Audio files
-
-> You'll need your **Cloud Name**, **API Key**, and **API Secret** from [Cloudinary](https://cloudinary.com/)
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/NatiDevHQ/spotify-clone-mern.git
-cd spotify-clone-mern
 
 
 ---
 
-2. Setup Environment Variables
+🎵 Full-Stack Music App
 
-Create .env files in both client and server folders.
+This repository contains both the backend (Node.js + Express + MongoDB) and the frontend (React + Vite + TailwindCSS) for a music application.
+It supports authentication, media uploads, and real-time features.
 
-🧠 Server (/server/.env)
+
+---
+
+🚀 Tech Stack
+
+Backend
+
+Node.js with Express
+
+MongoDB + Mongoose
+
+Cloudinary for media storage
+
+Clerk for authentication
+
+Socket.io for real-time communication
+
+Nodemon for development
+
+
+Frontend
+
+React 19 (with Vite)
+
+TailwindCSS + Radix UI + Lucide Icons
+
+Zustand for state management
+
+Axios for API calls
+
+Clerk React for authentication
+
+React Router v7 for navigation
+
+
+
+---
+
+📂 Project Structure
+
+root/
+│── backend/        # Node.js + Express API
+│   ├── src/
+│   │   ├── index.js         # App entry point
+│   │   ├── seeds/           # Database seeders (songs, albums)
+│   └── package.json
+│
+│── frontend/       # React + Vite app
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/           # App pages
+│   │   ├── store/           # Zustand state store
+│   └── package.json
+│
+└── README.md       # This file
+
+
+---
+
+⚙️ Installation
+
+Clone the repository and install dependencies for both frontend & backend:
+
+# Clone repository
+git clone <repo-url>
+cd <repo-name>
+
+# Install backend dependencies
+cd backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
+
+
+---
+
+🖥️ Running the App
+
+Backend (Node.js API)
+
+cd backend
+# Development mode
+npm run dev
+
+# Production mode
+npm start
+
+➡️ The backend will run on http://localhost:5000 (or your configured port).
+
+Frontend (React + Vite)
+
+cd frontend
+# Development mode
+npm run dev
+
+# Production build
+npm run build
+npm run preview
+
+➡️ The frontend will run on http://localhost:5173 by default.
+
+
+---
+
+🌱 Database Seeding
+
+You can populate the database with sample data:
+
+cd backend
+npm run seed:songs   # Seed sample songs
+npm run seed:albums  # Seed sample albums
+
+
+---
+
+🔑 Environment Variables
+
+Both backend and frontend require .env files.
+
+Backend .env
 
 PORT=5000
-MONGO_URI=your_mongo_connection_string
-CLERK_SECRET_KEY=your_clerk_secret_key
-CLOUDINARY_CLOUD_NAME=your_cloudinary_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
+MONGO_URI=your-mongodb-uri
+CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=your-api-key
+CLOUDINARY_API_SECRET=your-api-secret
+CLERK_SECRET_KEY=your-clerk-secret-key
 
-🖥 Client (/client/.env)
+Frontend .env
 
-VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-VITE_API_URL=http://localhost:5000/api
+VITE_CLERK_PUBLISHABLE_KEY=your-clerk-publishable-key
+VITE_API_URL=http://localhost:5000
 
 
 ---
 
-3. Install Dependencies
+✅ Features
+
+User authentication (Clerk)
+
+Upload and manage songs/albums (Cloudinary + MongoDB)
+
+Real-time updates with Socket.io
+
+Modern UI with TailwindCSS & Radix UI
+
+State management with Zustand
+
+Responsive & mobile-friendly
+
+
+
+---
+
+📜 Scripts
 
 Backend
 
-cd server
-npm install
+npm run dev → Start server with Nodemon
+
+npm start → Start server in production
+
+npm run seed:songs → Seed songs
+
+npm run seed:albums → Seed albums
+
 
 Frontend
 
-cd ../client
-npm install
+npm run dev → Start development server
 
+npm run build → Build production app
 
----
+npm run preview → Preview production build
 
-4. Run the App
-
-Backend
-
-cd server
-npm run dev
-
-Frontend
-
-cd client
-npm run dev
-
-> App runs on:
-Frontend: http://localhost:3000
-Backend: http://localhost:5000
-
+npm run lint → Lint code
 
 
 
 ---
 
-🗂 Folder Structure
+🤝 Contributing
 
-spotify-clone/
-│
-├── client/               # React + Tailwind + Clerk frontend
-│   ├── src/
-│   └── .env
-│
-├── server/               # Express + MongoDB + Cloudinary backend
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   ├── middleware/
-│   └── .env
+1. Fork the repo
 
 
----
-
-✅ To-Do
-
-[x] Clerk auth setup
-
-[x] Upload images/audio to Cloudinary
-
-[x] Play and stream audio
-
-[x] Playlist and album support
-
-[ ] Dark mode toggle
-
-[ ] Like / Save music
-
-[ ] Mobile responsiveness
+2. Create a feature branch (git checkout -b feature-name)
 
 
----
+3. Commit changes (git commit -m 'Add feature')
 
-🧑‍💻 Author
 
-Built by Natnael – feel free to reach out or contribute!
+4. Push branch (git push origin feature-name)
+
+
+5. Open a Pull Request
+
+
 
 
 ---
 
 📄 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the ISC License.
+
 
 ---
-
-
-```
