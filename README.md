@@ -1,75 +1,43 @@
 
 
----
+# 🎵 Full-Stack Music App  
 
-🎵 Full-Stack Music App
-
-This repository contains both the backend (Node.js + Express + MongoDB) and the frontend (React + Vite + TailwindCSS) for a music application.
-It supports authentication, media uploads, and real-time features.
-
+This repository contains both the **backend** (Node.js + Express + MongoDB) and the **frontend** (React + Vite + TailwindCSS) for a music application.  
+It supports authentication, media uploads, and real-time features.  
 
 ---
 
-🚀 Tech Stack
+## 🚀 Tech Stack  
 
-Backend
+### Backend  
+- **Node.js** with **Express**  
+- **MongoDB + Mongoose**  
+- **Cloudinary** for media storage  
+- **Clerk** for authentication  
+- **Socket.io** for real-time communication  
+- **Nodemon** for development  
 
-Node.js with Express
-
-MongoDB + Mongoose
-
-Cloudinary for media storage
-
-Clerk for authentication
-
-Socket.io for real-time communication
-
-Nodemon for development
-
-
-Frontend
-
-React 19 (with Vite)
-
-TailwindCSS + Radix UI + Lucide Icons
-
-Zustand for state management
-
-Axios for API calls
-
-Clerk React for authentication
-
-React Router v7 for navigation
-
-
+### Frontend  
+- **React 19** (with Vite)  
+- **TailwindCSS** + **Radix UI** + **Lucide Icons**  
+- **Zustand** for state management  
+- **Axios** for API calls  
+- **Clerk React** for authentication  
+- **React Router v7** for navigation  
 
 ---
 
-📂 Project Structure
+## 📂 Project Structure
 
-root/
-│── backend/        # Node.js + Express API
-│   ├── src/
-│   │   ├── index.js         # App entry point
-│   │   ├── seeds/           # Database seeders (songs, albums)
-│   └── package.json
-│
-│── frontend/       # React + Vite app
-│   ├── src/
-│   │   ├── components/      # Reusable UI components
-│   │   ├── pages/           # App pages
-│   │   ├── store/           # Zustand state store
-│   └── package.json
-│
-└── README.md       # This file
-
+root/ │── backend/        # Node.js + Express API │   ├── src/ │   │   ├── index.js         # App entry point │   │   ├── seeds/           # Database seeders (songs, albums) │   └── package.json │ │── frontend/       # React + Vite app │   ├── src/ │   │   ├── components/      # Reusable UI components │   │   ├── pages/           # App pages │   │   ├── store/           # Zustand state store │   └── package.json │ └── README.md       # This file
 
 ---
 
-⚙️ Installation
+## ⚙️ Installation  
 
-Clone the repository and install dependencies for both frontend & backend:
+Clone the repository and install dependencies for both frontend & backend:  
 
+```bash
 # Clone repository
 git clone <repo-url>
 cd <repo-name>
@@ -215,5 +183,3 @@ npm run lint → Lint code
 
 This project is licensed under the ISC License.
 
-
----
