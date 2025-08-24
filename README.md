@@ -141,8 +141,6 @@ spotify-clone/
 │   ├── models/
 │   ├── middleware/
 │   └── .env
-│
-└── README.md
 
 
 ---
