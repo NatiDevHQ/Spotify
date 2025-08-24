@@ -27,12 +27,6 @@ It supports authentication, media uploads, and real-time features.
 
 ---
 
-## 📂 Project Structure
-
-root/ │── backend/        # Node.js + Express API │   ├── src/ │   │   ├── index.js         # App entry point │   │   ├── seeds/           # Database seeders (songs, albums) │   └── package.json │ │── frontend/       # React + Vite app │   ├── src/ │   │   ├── components/      # Reusable UI components │   │   ├── pages/           # App pages │   │   ├── store/           # Zustand state store │   └── package.json │ └── README.md       # This file
-
----
-
 ## ⚙️ Installation  
 
 Clone the repository and install dependencies for both frontend & backend:  
