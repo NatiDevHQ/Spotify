@@ -4,7 +4,7 @@
 
 A full-stack Spotify clone built with the **MERN** stack (MongoDB, Express, React, Node.js), **Clerk** for authentication, **Cloudinary** for image & audio uploads, and **Tailwind CSS** for UI styling.
 
-## ✨ Features
+## ✨ Features.
 
 - 🔐 User authentication with Clerk (Sign in, Sign up, etc.)
 - 🎶 Upload & stream music tracks
