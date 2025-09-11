@@ -1,4 +1,4 @@
-In development status 🙌 
+In development status 
 
 # 🎵 Full-Stack Music App  
 
